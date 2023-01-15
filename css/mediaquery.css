@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+
     .lists__header{
         position: absolute;
         top: 12vh;
@@ -44,6 +48,11 @@
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
     .link__lists___header {
         margin-left: 12px;
     }
