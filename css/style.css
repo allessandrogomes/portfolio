@@ -1,0 +1,68 @@
+:root {
+    --label-icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/lua.png");
+    --body-color: #F5F5F5;
+    --header-li: #666666;
+    --icon-github-header: url('./img/header/github-icon.svg');
+    --icon-linkedin-header: url('./img/header/linkedin-icon.svg');
+    --title-text-color: #42446E;
+    --subtitle-text-color: #666666;
+    --card-projects-color: #FFFFFF;
+    --title-cards-projetcs: black;
+    --subtitle-cards-projects: #666666;
+    --subtitle2-cards-projects: #42446E;
+    --text-link-cards-projects: black;
+    --livepreview-img-link-cards-projects: url('/img/projects/livepreview-image.png');
+    --github-img-link-cards-projects: url('/img/projects/github-link-cards.png');
+    --name-developer-footer-color1: rgb(122,223,231);
+    --name-developer-footer-color2: rgba(122,223,231,1);
+    --name-developer-footer-color3: rgba(51,59,198,1);
+    --phone-footer-color: #42446E;
+    --link-lists-footer-color: #42446E;
+    --border-img-presentation-color: black;
+    --header-color: #ececec;
+}
+
+.dark-mode {
+    --label-icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/sol.png");
+    --body-color: #191919;
+    --header-li: #A7A7A7;
+    --title-text-color: #D9D9D9;
+    --subtitle-text-color: #A7A7A7;
+    --card-projects-color: #363636;
+    --title-cards-projects: #CCCCCC;
+    --subtitle-cards-projects: #CCCCCC;
+    --subtitle2-cards-projects: #CCCCCC;
+    --text-link-cards-projects: #FFFFFF;
+    --livepreview-img-link-cards-projects: url('/img/projects/livepreview-image-white.png');
+    --github-img-link-cards-projects: url('/img/projects/github-link-cards-white.png');
+    --name-developer-footer-color1: #A7A7A7;
+    --name-developer-footer-color2: #A7A7A7;
+    --name-developer-footer-color3: #A7A7A7;
+    --phone-footer-color: #A7A7A7;
+    --link-lists-footer-color: #A7A7A7;
+    --border-img-presentation-color: white;
+    --header-color: #222222;
+}
+
+body {
+    background-color: var(--body-color);
+    transition: 0.2s;
+    overflow-x: hidden;
+}
+
+.title__section {
+    font-family: 'Poppins';
+    font-size: 48px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--title-text-color);
+}
+
+.subtitle__section {
+    font-family: 'Poppins';
+    font-size: 32px;
+    text-align: center;
+    color: var(--subtitle-text-color);
+    margin-top: 30px;
+    font-weight: 400;
+}

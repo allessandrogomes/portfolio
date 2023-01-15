@@ -1,0 +1,16 @@
+.container__technologies {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 150px 0;
+}
+
+.container__technologies___icons {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 20%;
+    margin-top: 150px;
+}

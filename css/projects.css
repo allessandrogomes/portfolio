@@ -1,0 +1,107 @@
+.container__projects {
+    width: 100%;
+    margin-top: 250px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.container__cards___projects {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.cards__projects {
+    background-color: var(--card-projects-color);
+    width: 375px;
+    height: 580px;
+    margin-top: 50px;
+    margin-right: 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 100px rgba(0, 0, 0, 0.2);
+}
+
+.container__image___cards____projects {
+    width: 100%;
+    height: 45%;
+    background-image: url(../img/projects/development.webp);
+    background-size: cover;
+    border-radius: 20px 20px 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container__image___cards____projects.card1 {
+    background-image: url(../img/projects/technical-assistance.png);
+}
+
+.title__cards___projects {
+    color: var(--title-cards-projects);
+    font-family: 'Poppins';
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.subtitle__cards___projects {
+    font-family: 'Poppins';
+    font-size: 17px;
+    line-height: 26px;
+    font-weight: 300;
+    color: var(--subtitle-cards-projects);
+    padding: 0 20px;
+    height: 130px;
+}
+
+.subtitle2__cards___projects {
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 300;
+    line-height: 26px;
+    padding: 20px 0;
+    padding-left: 20px;
+    color: var(--subtitle2-cards-projects);
+}
+
+.container__link___cards____projects {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 60px;
+}
+
+.link__cards___projects {
+    display: flex;
+    width: 120px;
+}
+
+.livepreview-img__link___cards____projetcs {
+    width: 20px;
+    height: 20px;
+    padding-right: 8px;
+    background-image: var(--livepreview-img-link-cards-projects);
+    background-repeat: no-repeat;
+}
+
+.github-img__link___cards____projetcs {
+    width: 20px;
+    height: 20px;
+    padding-right: 8px;
+    background-image: var(--github-img-link-cards-projects);
+    background-repeat: no-repeat;
+}
+
+.text__link___cards____projects {
+    color: var(--text-link-cards-projects);
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-decoration-line: underline;
+}

@@ -1,0 +1,24 @@
+.mobile__menu {
+    cursor: pointer;
+    display: none;
+}
+
+.mobile__menu div {
+    width: 32px;
+    height: 2px;
+    background-color: var(--subtitle2-cards-projects);
+    margin: 8px;
+    transition: .3s;
+}
+
+.mobile__menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile__menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile__menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}

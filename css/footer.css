@@ -1,0 +1,81 @@
+.container__footer-1 {
+    width: 77.5%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.container__phone-email-icons___footer {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+}
+
+.phone__footer-1 {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--phone-footer-color);
+}
+
+.email__footer-1 {
+    font-family: 'DM Sans';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--phone-footer-color);
+}
+
+.icon-github__footer {
+    padding-right: 15px;
+}
+
+.line__footer {
+    width: 77.5%;
+    height: 2px;
+    opacity: 0.3;
+    background-color: #666666;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.container__footer-2 {
+    width: 77.5%;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container__lists___footer-2 {
+    width: 40%;
+    align-items: center;
+    display: block;
+}
+
+.lists__footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.link__lists___footer {
+    font-family: 'DM Sans';
+    padding-top: 6px;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--link-lists-footer-color);
+}
+
+.developer__footer-2 {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--header-li);
+    text-align: right;
+    width: 100%;
+}

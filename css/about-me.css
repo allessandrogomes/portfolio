@@ -1,0 +1,107 @@
+.container__about-me {
+    width: 100%;
+    margin-bottom: 200px;
+}
+
+.descricao__about-me {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--subtitle-text-color);
+    width: 50%;
+    margin: 50px auto;
+}
+
+.container__content___work-experience {
+    width: 800px;
+    margin: 50px auto;
+}
+
+.content__work-experience--education {
+    width: 100%;
+    height: 75px;
+    margin-bottom: 35px;
+}
+
+.title-period__content___work-experience--education {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tittle__content___work-experience--education {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: var(--subtitle-text-color);
+}
+
+.container__period___content____work-experience--education {
+    background-color:#D7FFE0;
+    border-radius: 100px;
+    width: 85px;
+}
+
+.period__content___work-experience--education {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 26px;
+    text-align: center;
+    color: #018C0F;
+}
+
+.company-local-time__content___work-experience--education {
+    display: flex;
+    justify-content: space-between;
+}
+
+.company__content___work-experience--education {
+    display: flex;
+    width: 230px;
+}
+
+.company-text__content___work-experience {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: #A7A7A7;
+    padding-left: 2px;
+}
+
+.text__content___work-experience--education {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    color: #A7A7A7;
+    padding-left: 2px;
+} 
+
+.local__content___work-experience--education {
+    display: flex;
+    width: 230px;
+}
+
+
+
+.time__content___work-experience--education {
+    display: flex;
+}
+
+.line__content__work-experience--education {
+    width: 100%;
+    height: 2.2px;
+    background-color: var(--subtitle-text-color);
+    margin-top: 20px;
+} 
+
+.container__content___education {
+    width: 800px;
+    margin: 50px auto;
+} 
