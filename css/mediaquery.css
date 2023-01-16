@@ -42,6 +42,10 @@
         display: block;
     }
 
+    .container__presentation {
+        padding-top: 80px;
+    }
+
     .container__content___presentation {
         width: 100%;
         flex-direction: column;
