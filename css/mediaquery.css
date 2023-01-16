@@ -1,8 +1,4 @@
 @media screen and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-    }
-
     .lists__header{
         position: absolute;
         top: 15vh;
@@ -45,14 +41,32 @@
     .mobile__menu {
         display: block;
     }
+
+    .container__content___presentation {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        height: initial;
+    }
+
+    .container__text___content____presentation {
+        width: 80%;
+        text-align: center;
+    }
+
+    .text__content___presentation {
+        font-size: 35px;
+        line-height: 50px;
+    }
+
+    .image__content___presentation {
+        width: 200px;
+        height: 200px;
+        margin-top: 25px;
+    } 
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
-    body {
-        overflow-x: hidden;
-    }
-
     .link__lists___header {
         margin-left: 12px;
     }
