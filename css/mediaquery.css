@@ -72,7 +72,126 @@
         width: 200px;
         height: 200px;
         margin-top: 25px;
-    } 
+    }
+    
+    .container__technologies {
+        margin: 100px 0;
+    }
+    
+    .title__section{
+        font-size: 35px;
+    }
+
+    .subtitle__section {
+        font-size: 22px;
+    }
+
+    .container__technologies___icons {
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .technologies__icons {
+        width: calc(50% - 50px);
+        padding-bottom: 10%;
+    }
+
+    .container__projects {
+        margin-top: 100px;
+    }
+
+    .container__cards___projects {
+        margin-top: 50px;
+    }
+
+    .cards__projects {
+        margin-right: 0;
+        height: 460px;
+    }
+
+    .container__link___cards____projects {
+        padding-right: calc(60px - 11%);
+    }
+
+    .container__image___cards____projects {
+        height: 30%;
+    }
+
+    .title__cards___projects {
+        font-size: 21px;
+    }
+
+    .subtitle__cards___projects {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .subtitle2__cards___projects {
+        padding-top: 40px;
+        font-size: 12px;
+    }
+
+    .text__link___cards____projects {
+        font-size: 12px;
+    }
+
+    .descricao__about-me {
+        width: 70%;
+        text-align: center;
+    }
+
+    .container__content___work-experience {
+        width: 100%;
+    }
+
+    .content__work-experience--education {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .title-period__content___work-experience--education {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .company-local-time__content___work-experience--education {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .line__content__work-experience--education {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .cards__projects {
+        width: 290px;
+    }
+
+    .container__link___cards____projects {
+        padding-right: calc(60px - 21%);
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    .title__section {
+        font-size: 45px;
+    }
+
+    .subtitle__section {
+        font-size: 25px;
+    }
+
+    .technologies__icons {
+        width: calc(40% - 20px) ;
+    }
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
