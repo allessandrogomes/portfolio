@@ -15,13 +15,11 @@
 
 .container__content___work-experience {
     width: 800px;
-    margin: 50px auto;
+    margin: 50px auto 0 auto;
 }
 
 .content__work-experience--education {
     width: 100%;
-    height: 75px;
-    margin-bottom: 35px;
 }
 
 .title-period__content___work-experience--education {
@@ -98,7 +96,7 @@
     width: 100%;
     height: 2.2px;
     background-color: var(--subtitle-text-color);
-    margin-top: 20px;
+    margin: 20px auto;
 } 
 
 .container__content___education {
