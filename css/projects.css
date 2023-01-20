@@ -85,7 +85,6 @@
     width: 20px;
     height: 20px;
     padding-right: 8px;
-    background-image: var(--livepreview-img-link-cards-projects);
     background-repeat: no-repeat;
 }
 
@@ -93,7 +92,6 @@
     width: 20px;
     height: 20px;
     padding-right: 8px;
-    background-image: var(--github-img-link-cards-projects);
     background-repeat: no-repeat;
 }
 

@@ -11,6 +11,18 @@ const enableDarkMode = () => {
     document.getElementById("darkmode-github-footer").src = "./img/header/github-darkmode-icon.svg";
     document.getElementById("darkmode-linkedin-footer").src = "./img/header/linkedin-darkmode-icon.svg";
     document.getElementById("darkmode-github-technologies").src = "./img/technologies/github-icon-white2.svg";
+    document.getElementById("livepreview-icon-link1").src = "./img/projects/livepreview-image-white.png";
+    document.getElementById("livepreview-icon-link2").src = "./img/projects/livepreview-image-white.png";
+    document.getElementById("livepreview-icon-link3").src = "./img/projects/livepreview-image-white.png";
+    document.getElementById("livepreview-icon-link4").src = "./img/projects/livepreview-image-white.png";
+    document.getElementById("livepreview-icon-link5").src = "./img/projects/livepreview-image-white.png";
+    document.getElementById("livepreview-icon-link6").src = "./img/projects/livepreview-image-white.png";
+    document.getElementById("github-icon-link1").src = "./img/projects/github-link-cards-white.png";
+    document.getElementById("github-icon-link2").src = "./img/projects/github-link-cards-white.png";
+    document.getElementById("github-icon-link3").src = "./img/projects/github-link-cards-white.png";
+    document.getElementById("github-icon-link4").src = "./img/projects/github-link-cards-white.png";
+    document.getElementById("github-icon-link5").src = "./img/projects/github-link-cards-white.png";
+    document.getElementById("github-icon-link6").src = "./img/projects/github-link-cards-white.png";
     localStorage.setItem("dark-mode", "enabled");
 };
 
@@ -21,6 +33,18 @@ const disableDarkMode = () => {
     document.getElementById("darkmode-github-footer").src = "./img/footer/github-icon-footer.png";
     document.getElementById("darkmode-linkedin-footer").src = "./img/footer/icon-linkedin-footer.png";
     document.getElementById("darkmode-github-technologies").src = "./img/technologies/github-icon.svg";
+    document.getElementById("livepreview-icon-link1").src = "./img/projects/livepreview-image.png";
+    document.getElementById("livepreview-icon-link2").src = "./img/projects/livepreview-image.png";
+    document.getElementById("livepreview-icon-link3").src = "./img/projects/livepreview-image.png";
+    document.getElementById("livepreview-icon-link4").src = "./img/projects/livepreview-image.png";
+    document.getElementById("livepreview-icon-link5").src = "./img/projects/livepreview-image.png";
+    document.getElementById("livepreview-icon-link6").src = "./img/projects/livepreview-image.png";
+    document.getElementById("github-icon-link1").src = "./img/projects/github-link-cards.png";
+    document.getElementById("github-icon-link2").src = "./img/projects/github-link-cards.png";
+    document.getElementById("github-icon-link3").src = "./img/projects/github-link-cards.png";
+    document.getElementById("github-icon-link4").src = "./img/projects/github-link-cards.png";
+    document.getElementById("github-icon-link5").src = "./img/projects/github-link-cards.png";
+    document.getElementById("github-icon-link6").src = "./img/projects/github-link-cards.png";
     localStorage.setItem("dark-mode", "disabled");
 };
 

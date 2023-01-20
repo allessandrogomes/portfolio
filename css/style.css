@@ -2,8 +2,6 @@
     --label-icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/lua.png");
     --body-color: #F5F5F5;
     --header-li: #666666;
-    --icon-github-header: url('./img/header/github-icon.svg');
-    --icon-linkedin-header: url('./img/header/linkedin-icon.svg');
     --title-text-color: #42446E;
     --subtitle-text-color: #666666;
     --card-projects-color: #FFFFFF;
@@ -33,8 +31,6 @@
     --subtitle-cards-projects: #CCCCCC;
     --subtitle2-cards-projects: #CCCCCC;
     --text-link-cards-projects: #FFFFFF;
-    --livepreview-img-link-cards-projects: url('/img/projects/livepreview-image-white.png');
-    --github-img-link-cards-projects: url('/img/projects/github-link-cards-white.png');
     --name-developer-footer-color1: #A7A7A7;
     --name-developer-footer-color2: #A7A7A7;
     --name-developer-footer-color3: #A7A7A7;

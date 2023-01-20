@@ -93,7 +93,7 @@
 }
 
 .line__content__work-experience--education {
-    width: 100%;
+    width: 800px;
     height: 2.2px;
     background-color: var(--subtitle-text-color);
     margin: 20px auto;
