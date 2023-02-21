@@ -9,8 +9,12 @@
 
 .container__technologies___icons {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 80%;
-    height: 20%;
     margin-top: 150px;
+}
+
+.technologies__icons {
+    padding: 10px;
 }
