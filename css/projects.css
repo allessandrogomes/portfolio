@@ -52,6 +52,10 @@
     background-image: url(../img/projects/organo-bg.png);
 }
 
+.container__image___cards____projects.card5 {
+    background-image: url(../img/projects/newsletter.png);
+}
+
 .title__cards___projects {
     color: var(--title-cards-projects);
     font-family: 'Poppins';
