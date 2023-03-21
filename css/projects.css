@@ -56,6 +56,10 @@
     background-image: url(../img/projects/newsletter.png);
 }
 
+.container__image___cards____projects.card6 {
+    background-image: url(../img/projects/fetch-api.png);
+}
+
 .title__cards___projects {
     color: var(--title-cards-projects);
     font-family: 'Poppins';
