@@ -1,26 +1,98 @@
 @import "tailwindcss";
+@import "./music-phases.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  --color-background: #0a0a0a;
+  --color-foreground: #f2f0eb;
+  --color-muted: #8a8780;
+  --color-pede-ai: #ff3333;
+  --color-konva: #0d83cd;
+  --color-vezon: #c6f24e;
+  --font-display: var(--font-anton);
+  --font-sans: var(--font-inter);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --animate-counter-in: counter-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --animate-menu-in: menu-in 0.8s ease-out;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  @keyframes counter-in {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0%);
+    }
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @keyframes menu-in {
+    0% {
+      opacity: 0;
+      transform: translateX(12px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  --animate-equalizer: equalizer 0.9s ease-in-out infinite;
+
+  @keyframes equalizer {
+    0%,
+    100% {
+      transform: scaleY(0.25);
+    }
+    50% {
+      transform: scaleY(1);
+    }
+  }
+
+  --animate-timeline-comet: timeline-comet 3.2s ease-in-out infinite;
+
+  @keyframes timeline-comet {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    15%,
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 0;
+    }
+  }
+
+  --animate-packet-forward: packet-forward 1.8s ease-in-out infinite;
+  --animate-packet-backward: packet-backward 1.8s ease-in-out infinite;
+
+  @keyframes packet-forward {
+    0% {
+      transform: translateX(0%);
+      opacity: 0;
+    }
+    15%,
+    85% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes packet-backward {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    15%,
+    85% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 0;
+    }
+  }
 }

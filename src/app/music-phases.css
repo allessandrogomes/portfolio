@@ -1,0 +1,582 @@
+@media (prefers-reduced-motion: no-preference) {
+  [data-music-stage] {
+    --music-progress: 0;
+    --wave-duration: 3s;
+    --wave-opacity: 0;
+    --wave-color: rgb(242 240 235 / 0.5);
+    --glow-color: rgb(242 240 235 / 0.35);
+  }
+
+  [data-music-stage] [data-music-zoom] {
+    transition:
+      scale 0.6s ease-out,
+      filter 1.5s ease;
+  }
+
+  [data-music-stage] [data-music-glow] {
+    opacity: 0;
+    background: radial-gradient(circle, var(--glow-color), transparent 65%);
+    transition: opacity 0.4s ease;
+  }
+
+  [data-music-stage] [data-music-vignette] {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  [data-music-stage] [data-music-flash] {
+    opacity: 0;
+  }
+
+  [data-music-stage] [data-music-riser] {
+    opacity: 0;
+    scale: 1 0;
+    transition:
+      scale 0.2s linear,
+      opacity 0.4s ease;
+  }
+
+  [data-music-stage]:not([data-music-phase="idle"]) [data-music-wave] {
+    border-color: var(--wave-color);
+    animation: music-wave var(--wave-duration) ease-out infinite;
+    animation-delay: calc(var(--wave-duration) * var(--wave-index) / -3);
+  }
+
+  [data-music-paused]
+    :is(
+      [data-music-photo],
+      [data-music-wave],
+      [data-music-glow],
+      [data-music-shake],
+      [data-music-shockwave] > span,
+      [data-music-flash],
+      [data-equalizer-bar]
+    ) {
+    animation-play-state: paused;
+  }
+
+  [data-music-phase="intro"] {
+    --wave-duration: 3.2s;
+    --wave-opacity: 0.25;
+  }
+
+  [data-music-phase="intro"] [data-music-photo] {
+    animation: music-sway 3.2s ease-in-out infinite;
+  }
+
+  [data-music-phase="build-up"] {
+    --beat-duration: 0.8s;
+    --bounce-height: -14px;
+    --wave-duration: var(--beat-duration);
+    --wave-opacity: calc(0.4 + var(--music-progress) * 0.4);
+    --glow-color: rgb(242 240 235 / 0.5);
+  }
+
+  [data-music-phase="build-up"][data-music-step="1"] {
+    --beat-duration: 0.4s;
+    --bounce-height: -11px;
+  }
+
+  [data-music-phase="build-up"][data-music-step="2"] {
+    --beat-duration: 0.2s;
+    --bounce-height: -8px;
+  }
+
+  [data-music-phase="build-up"][data-music-step="3"] {
+    --beat-duration: 0.1s;
+    --bounce-height: -5px;
+  }
+
+  [data-music-phase="build-up"] [data-music-zoom] {
+    scale: calc(1 + var(--music-progress) * 0.12);
+  }
+
+  [data-music-phase="build-up"] [data-music-glow] {
+    opacity: calc(0.3 + var(--music-progress) * 0.7);
+    animation: music-glow-beat var(--beat-duration) ease-out infinite;
+  }
+
+  [data-music-phase="build-up"] [data-music-photo] {
+    animation: music-build-bounce var(--beat-duration) ease-out infinite;
+  }
+
+  [data-music-phase="build-up"] [data-music-shake] {
+    animation: music-content-pulse var(--beat-duration) ease-out infinite;
+  }
+
+  [data-music-phase="build-up"] [data-music-riser] {
+    opacity: 1;
+    scale: 1 var(--music-progress);
+  }
+
+  [data-music-phase="build-up"][data-music-step="3"] [data-music-flash] {
+    animation: music-strobe var(--beat-duration) steps(1) infinite;
+  }
+
+  [data-music-phase="build-up"] [data-equalizer-bar] {
+    animation-duration: var(--beat-duration);
+  }
+
+  [data-music-phase="suspense"] {
+    --wave-duration: 0.9s;
+    --wave-opacity: 0.2;
+  }
+
+  [data-music-phase="suspense"] [data-music-zoom] {
+    scale: calc(1.05 + var(--music-progress) * 0.05);
+  }
+
+  [data-music-phase="suspense"] [data-music-glow] {
+    opacity: calc(0.5 + var(--music-progress) * 0.4);
+  }
+
+  [data-music-phase="suspense"] [data-music-vignette] {
+    opacity: calc(0.3 + var(--music-progress) * 0.6);
+  }
+
+  [data-music-phase="suspense"] [data-music-riser] {
+    opacity: calc(0.6 + var(--music-progress) * 0.4);
+    scale: 1 1;
+  }
+
+  [data-music-phase="suspense"] [data-music-photo] {
+    animation: music-tremble 0.09s linear infinite;
+  }
+
+  [data-music-phase="suspense"] [data-equalizer-bar] {
+    animation-duration: 0.25s;
+  }
+
+  [data-music-phase^="drop"] [data-music-flash] {
+    animation: music-flash 0.9s ease-out 1;
+  }
+
+  [data-music-phase="drop-kick"] [data-music-flash] {
+    animation:
+      music-flash 0.8s ease-out 1,
+      music-strobe 0.4s steps(1) 0.8s infinite;
+  }
+
+  [data-music-phase^="drop"] [data-equalizer-bar] {
+    animation-duration: 0.3s;
+  }
+
+  [data-music-stage] :is([data-music-default-photo], [data-music-drop-photo]) {
+    transition: opacity 0.15s ease;
+  }
+
+  [data-music-phase^="drop"] [data-music-default-photo] {
+    opacity: 0;
+  }
+
+  [data-music-phase^="drop"] [data-music-drop-photo] {
+    opacity: 1;
+  }
+
+  [data-music-phase="drop-heavy"] {
+    --heavy-beat: 0.8s;
+    --shock-color: rgb(255 122 0);
+    --wave-opacity: 0;
+    --glow-color: rgb(255 110 0 / 0.55);
+  }
+
+  [data-music-phase="drop-heavy"] [data-music-zoom] {
+    scale: 1.05;
+  }
+
+  [data-music-phase="drop-heavy"] [data-music-glow] {
+    animation: music-heavy-glow var(--heavy-beat) ease-out infinite;
+  }
+
+  [data-music-phase="drop-heavy"] [data-music-vignette] {
+    animation: music-heavy-vignette var(--heavy-beat) ease-out infinite;
+  }
+
+  [data-music-phase="drop-heavy"] [data-music-photo] {
+    animation: music-shock-recoil var(--heavy-beat)
+      cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+  }
+
+  [data-music-phase="drop-heavy"] [data-music-shockwave] > span {
+    border-color: var(--shock-color);
+    box-shadow:
+      0 0 40px 6px var(--shock-color),
+      inset 0 0 40px 6px var(--shock-color);
+    animation: music-shockwave var(--heavy-beat) cubic-bezier(0.1, 0.6, 0.3, 1)
+      infinite;
+  }
+
+  [data-music-phase="drop-heavy"] [data-music-shockwave] > span:nth-child(2) {
+    box-shadow: 0 0 20px 2px var(--shock-color);
+    animation-delay: 0.1s;
+  }
+
+  [data-music-phase="drop-heavy"] [data-music-shake] {
+    animation: music-shock-push var(--heavy-beat) ease-out infinite;
+  }
+
+  [data-music-phase="drop-heavy"] [data-music-flash] {
+    animation:
+      music-flash 0.9s ease-out 1,
+      music-heavy-hit var(--heavy-beat) ease-out 0.9s infinite;
+  }
+
+  [data-music-phase="drop-heavy"] [data-equalizer-bar] {
+    animation-duration: 0.2s;
+  }
+
+  [data-music-phase="drop-glitch"] {
+    --wave-duration: 0.6s;
+    --wave-opacity: 0.55;
+    --wave-color: rgb(255 122 0 / 0.65);
+    --glow-color: rgb(255 110 0 / 0.5);
+  }
+
+  [data-music-phase="drop-glitch"] [data-music-wave]:nth-child(2) {
+    border-color: rgb(255 176 32 / 0.6);
+  }
+
+  [data-music-phase="drop-glitch"] [data-music-glow] {
+    opacity: 0.9;
+    animation: music-orange-flicker 0.45s steps(1) infinite;
+  }
+
+  [data-music-phase="drop-glitch"] [data-music-photo] {
+    animation: music-glitch 0.45s steps(1) infinite;
+  }
+
+  [data-music-phase="drop-kick"] {
+    --wave-duration: 0.4s;
+    --wave-opacity: 0.7;
+    --glow-color: rgb(255 70 60 / 0.5);
+  }
+
+  [data-music-phase="drop-kick"] [data-music-glow] {
+    opacity: 1;
+    animation: music-kick-glow 0.4s ease-out infinite;
+  }
+
+  [data-music-phase="drop-kick"] [data-music-photo] {
+    animation: music-kick 0.4s cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+  }
+
+  [data-music-stage] :is([data-music-shake], [data-music-collapse]) {
+    transition:
+      rotate 1.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+      translate 1.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+      scale 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  [data-music-phase="drop-kick"] [data-music-shake] {
+    --collapse-amount: calc(0.15 + var(--music-progress) * 0.85);
+
+    transform-origin: 20% 100%;
+    rotate: calc(var(--collapse-amount) * -5deg);
+    translate: 0 calc(var(--collapse-amount) * 56px);
+    scale: calc(1 - var(--collapse-amount) * 0.06);
+    transition:
+      rotate 0.3s ease-out,
+      translate 0.3s ease-out,
+      scale 0.3s ease-out;
+    animation: music-shake 0.4s cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+  }
+
+  [data-music-phase="drop-kick"] [data-music-collapse] {
+    --collapse-amount: calc(0.15 + var(--music-progress) * 0.85);
+
+    transform-origin: 50% 100%;
+    rotate: calc(var(--collapse-amount) * 4deg);
+    translate: 0 calc(var(--collapse-amount) * 40px);
+    transition:
+      rotate 0.3s ease-out,
+      translate 0.3s ease-out;
+  }
+
+  [data-music-phase="drop-kick"] [data-equalizer-bar] {
+    animation-duration: 0.2s;
+  }
+
+  [data-music-phase="outro"] {
+    --wave-duration: 4.5s;
+    --wave-opacity: 0.12;
+  }
+
+  [data-music-phase="outro"] [data-music-zoom] {
+    filter: grayscale(0.8) brightness(0.75);
+  }
+
+  [data-music-phase="outro"] [data-music-photo] {
+    animation: music-sway 5s ease-in-out infinite;
+  }
+
+  [data-music-phase="outro"] [data-equalizer-bar] {
+    animation-duration: 1.6s;
+  }
+}
+
+@keyframes music-wave {
+  0% {
+    transform: scale(0.85);
+    opacity: var(--wave-opacity);
+  }
+  100% {
+    transform: scale(1.6);
+    opacity: 0;
+  }
+}
+
+@keyframes music-sway {
+  0%,
+  100% {
+    transform: rotate(-1.2deg);
+  }
+  50% {
+    transform: rotate(1.2deg);
+  }
+}
+
+@keyframes music-build-bounce {
+  0% {
+    transform: translateY(var(--bounce-height)) scale(1.02);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes music-glow-beat {
+  0% {
+    filter: brightness(1.6);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes music-content-pulse {
+  0% {
+    transform: scale(1.008);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes music-strobe {
+  0% {
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes music-tremble {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(1.5px, -1px);
+  }
+  50% {
+    transform: translate(-1px, 1.5px);
+  }
+  75% {
+    transform: translate(-1.5px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes music-shock-recoil {
+  0% {
+    transform: scale(1.06);
+    filter: brightness(1.45) contrast(1.1);
+  }
+  25% {
+    transform: scale(0.99);
+  }
+  50%,
+  100% {
+    transform: scale(1);
+    filter: none;
+  }
+}
+
+@keyframes music-shockwave {
+  0% {
+    transform: scale(0.04);
+    opacity: 0.95;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+@keyframes music-shock-push {
+  0%,
+  18% {
+    transform: none;
+  }
+  30% {
+    transform: translateX(16px) skewX(-2deg);
+  }
+  45% {
+    transform: translateX(-4px) skewX(0.5deg);
+  }
+  65%,
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes music-heavy-glow {
+  0% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0.45;
+    transform: scale(1);
+  }
+}
+
+@keyframes music-heavy-vignette {
+  0% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes music-heavy-hit {
+  0% {
+    opacity: 0.12;
+  }
+  25%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes music-glitch {
+  0% {
+    transform: translate(0, 0) skewX(0deg);
+    filter: none;
+  }
+  20% {
+    transform: translate(-6px, 2px) skewX(6deg);
+    filter: drop-shadow(5px 0 0 rgb(255 120 0 / 0.85))
+      drop-shadow(-5px 0 0 rgb(255 190 60 / 0.75));
+  }
+  40% {
+    transform: translate(4px, -2px) skewX(-4deg);
+    filter: drop-shadow(-4px 0 0 rgb(255 120 0 / 0.85))
+      drop-shadow(4px 0 0 rgb(255 190 60 / 0.75));
+  }
+  60% {
+    transform: translate(0, 0) skewX(0deg);
+    filter: none;
+  }
+  80% {
+    transform: translate(3px, 1px) scale(1.02);
+    filter: drop-shadow(3px 0 0 rgb(255 120 0 / 0.65));
+  }
+}
+
+@keyframes music-orange-flicker {
+  0% {
+    opacity: 0.95;
+  }
+  30% {
+    opacity: 0.5;
+  }
+  55% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.65;
+  }
+}
+
+@keyframes music-kick {
+  0% {
+    transform: scale(1.07);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes music-kick-glow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.35;
+  }
+}
+
+@keyframes music-shake {
+  0% {
+    transform: translate(3px, 9px);
+  }
+  25% {
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes music-flash {
+  0% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+[data-chaos] {
+  display: inline-block;
+  transition:
+    translate 1.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    rotate 1.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-music-phase="drop-kick"] [data-chaos] {
+    --chaos-amount: calc(0.15 + var(--music-progress) * 0.85);
+
+    translate: calc(var(--chaos-x) * var(--chaos-amount))
+      calc(var(--chaos-y) * var(--chaos-amount));
+    rotate: calc(var(--chaos-r) * var(--chaos-amount));
+    transition:
+      translate 0.2s linear,
+      rotate 0.2s linear;
+    animation: music-chaos-jolt 0.4s cubic-bezier(0.2, 0.9, 0.3, 1) infinite;
+  }
+
+  [data-music-paused] [data-chaos] {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes music-chaos-jolt {
+  0% {
+    transform: translate(
+        calc(var(--chaos-x) * 0.3),
+        calc(var(--chaos-y) * -0.3)
+      )
+      rotate(calc(var(--chaos-r) * 0.35));
+  }
+  100% {
+    transform: none;
+  }
+}
+
+
